@@ -5,9 +5,13 @@ import {
   BsJustify,
 } from "react-icons/bs";
 import ProfileComponent from "./ProfileComponent";
+// import { useToasts } from "react-hot-toast";
 import "../styles/dropdown.scss";
 
 function Header({ OpenSidebar }) {
+  // Use toast to display success or error messages
+  // const { success, error } = useToasts();
+
   // Mock user data
   const user = {
     username: "Neha",
@@ -17,11 +21,13 @@ function Header({ OpenSidebar }) {
 
   const handleLogout = () => {
     // Handle logout logic here
+    // success("Logout Successful Neha!");
     console.log("Logging out...");
   };
 
   const handleSettings = () => {
     // Handle settings logic here
+    // error("Please contact admin for settings!");
     console.log("Navigating to settings...");
   };
 

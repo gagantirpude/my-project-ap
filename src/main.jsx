@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-// import Demo from "./Demo.jsx";
+
 
 //Styles
 import "./styles/app.scss";
@@ -9,6 +9,5 @@ import "./styles/app.scss";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-    {/* <Demo /> */}
   </React.StrictMode>
 );
