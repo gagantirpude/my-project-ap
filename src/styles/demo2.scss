@@ -1,0 +1,86 @@
+/* styles.css */
+
+.icon {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #000000;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.profile-dropdown,
+.calendar-dropdown {
+  position: relative;
+}
+
+.profile-dropdown .icon,
+.calendar-dropdown .icon {
+  margin-right: 0; /* Remove margin for the icon inside dropdown */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  display: none; /* Initially hide the dropdown */
+}
+
+.profile-dropdown:hover .dropdown-menu,
+.calendar-dropdown:hover .dropdown-menu {
+  display: block; /* Show the dropdown on hover */
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-menu ul li:hover {
+  background-color: #f0f0f0;
+}
+
+.calendar-dropdown .dropdown-menu {
+  left: 50%; /* Center the dropdown */
+  transform: translateX(-50%);
+}
