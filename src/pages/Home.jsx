@@ -15,8 +15,7 @@ import PieChartComponent from "../components/chart/PieChartComponent";
 import RadarChartComponent from "../components/chart/RadarChartComponent";
 import ScatterChartComponent from "../components/chart/ScatterChartComponent";
 
-// import "../styles/chart.scss";
-import "../styles/cartoon.css";
+import "../styles/chart.scss";
 
 function Home() {
   const [showCalendar, setShowCalendar] = useState(false);
