@@ -12,9 +12,9 @@ import "../styles/demo3.scss";
 function Header({ OpenSidebar }) {
   // Mock user data
   const user = {
-    username: "JohnDoe",
+    username: "Neha",
     profileImage:
-      "https://qph.cf2.quoracdn.net/main-qimg-8578910fde7d932c3ff42291113a2a5f-lq", // URL to user's profile image
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.fh8-Tk_BjUMBasKF0NWk2QHaHa%26pid%3DApi&f=1&ipt=aa96d139742fb4f48c55c848522b65c2febd16bc87e14866932e5b19cb943385&ipo=images", // URL to user's profile image
   };
 
   const handleLogout = () => {
