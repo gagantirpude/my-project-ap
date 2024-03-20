@@ -1,20 +1,35 @@
-// import { useToasts } from "react-hot-toast";
+// import React from "react";
 
-function PageNotFound() {
-  //   const { error } = useToasts();
+import "../styles/404.scss";
 
-  const handleLogin = () => {
-    // Logic to handle login
-    // If login fails, show error toast
-    // error("Login failed. Please try again.");
-  };
-
+const PageNotFound = () => {
   return (
-    <div>
-      <h2>Login Page</h2>
-      <button onClick={handleLogin}>Login</button>
-    </div>
+    <section className="page_404">
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-12">
+            <div className="col-sm-10 col-sm-offset-1 text-center">
+              <div className="four_zero_four_bg">
+                <h1 className="text-center" style={{ textAlign: "center" }}>
+                  404
+                </h1>
+              </div>
+
+              <div className="contant_box_404" style={{ textAlign: "center" }}>
+                <h3 className="h2">Look like you are lost</h3>
+
+                <p>The page you are looking for is not available!</p>
+
+                <a href="/" className="link_404">
+                  Go to Home
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
-}
+};
 
 export default PageNotFound;
