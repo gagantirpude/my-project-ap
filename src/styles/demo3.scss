@@ -1,19 +1,6 @@
 /* styles.css */
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-}
-
-.header-left,
-.header-right {
-  display: flex;
-  align-items: center;
-}
+@import "static";
 
 .icon {
   font-size: 20px;
@@ -22,8 +9,8 @@
 }
 
 .profile-image {
-  width: 80px;
-  height: 80px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
 }
 
@@ -47,6 +34,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
   display: none; /* Initially hide the dropdown */
+  color: $black;
 }
 
 .calendar-dropdown .dropdown-menu {
@@ -72,4 +60,8 @@
 
 .dropdown-menu ul li:hover {
   background-color: #f0f0f0;
+}
+
+.dropdown-menu ul li:hover {
+  background-color: $black;
 }

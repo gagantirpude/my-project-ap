@@ -1,7 +1,7 @@
 /* Header  */
 .header {
   grid-area: header;
-  height: 100px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,4 +11,19 @@
 
 .menu-icon {
   display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
 }

@@ -23,7 +23,7 @@ function LoginForm() {
           <h4>
             We are <span>NUVA</span>
           </h4>
-          <p>Welcome back! Log in to your account to view today's clients:</p>
+          <p>Welcome back! Log in to your account to view today is clients:</p>
           <div className="floating-label">
             <input
               placeholder="Email"
