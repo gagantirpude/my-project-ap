@@ -1,76 +1,112 @@
-import React from "react";
+import { useState } from "react";
 import {
   BsFillArchiveFill,
   BsFillGrid3X3GapFill,
   BsPeopleFill,
   BsFillBellFill,
 } from "react-icons/bs";
-import {
-  BarChart,
-  Bar,
-  Cell,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-  LineChart,
-  Line,
-} from "recharts";
+import CalendarComponent from "../components/CalendarComponent";
+// import Charts from "../components/Chart";
+import LineChartComponent from "../components/chart/LineChartComponent";
+import AreaChartComponent from "../components/chart/AreaChartComponent";
+import BarChartComponent from "../components/chart/BarChartComponent";
+import ComposedChartComponent from "../components/chart/ComposedChartComponent";
+import PieChartComponent from "../components/chart/PieChartComponent";
+import RadarChartComponent from "../components/chart/RadarChartComponent";
+import ScatterChartComponent from "../components/chart/ScatterChartComponent";
+
+// import "../styles/chart.scss";
+import "../styles/cartoon.css";
 
 function Home() {
-  const data = [
-    {
-      name: "Page A",
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: "Page B",
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-    {
-      name: "Page C",
-      uv: 2000,
-      pv: 9800,
-      amt: 2290,
-    },
-    {
-      name: "Page D",
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
-    },
-    {
-      name: "Page E",
-      uv: 1890,
-      pv: 4800,
-      amt: 2181,
-    },
-    {
-      name: "Page F",
-      uv: 2390,
-      pv: 3800,
-      amt: 2500,
-    },
-    {
-      name: "Page G",
-      uv: 3490,
-      pv: 4300,
-      amt: 2100,
-    },
+  const [showCalendar, setShowCalendar] = useState(false);
+
+  const toggleCalendar = () => {
+    setShowCalendar(!showCalendar);
+  };
+
+  const handleDateSelect = (year, month) => {
+    console.log("Selected month:", month);
+    console.log("Selected year:", year);
+  };
+
+  // Demo data for charts
+  const lineChartData = [
+    { name: "Jan", uv: 4000, pv: 2400, amt: 2400 },
+    { name: "Feb", uv: 3000, pv: 1398, amt: 2210 },
+    { name: "Mar", uv: 2000, pv: 9800, amt: 2290 },
+    { name: "Apr", uv: 2780, pv: 3908, amt: 2000 },
+    { name: "May", uv: 1890, pv: 4800, amt: 2181 },
+    { name: "Jun", uv: 2390, pv: 3800, amt: 2500 },
+    { name: "Jul", uv: 3490, pv: 4300, amt: 2100 },
+  ];
+
+  const areaChartData = [
+    { name: "Jan", uv: 4000, pv: 2400, amt: 2400 },
+    { name: "Feb", uv: 3000, pv: 1398, amt: 2210 },
+    { name: "Mar", uv: 2000, pv: 9800, amt: 2290 },
+    { name: "Apr", uv: 2780, pv: 3908, amt: 2000 },
+    { name: "May", uv: 1890, pv: 4800, amt: 2181 },
+    { name: "Jun", uv: 2390, pv: 3800, amt: 2500 },
+    { name: "Jul", uv: 3490, pv: 4300, amt: 2100 },
+  ];
+
+  const barChartData = [
+    { name: "Jan", uv: 4000, pv: 2400, amt: 2400 },
+    { name: "Feb", uv: 3000, pv: 1398, amt: 2210 },
+    { name: "Mar", uv: 2000, pv: 9800, amt: 2290 },
+    { name: "Apr", uv: 2780, pv: 3908, amt: 2000 },
+    { name: "May", uv: 1890, pv: 4800, amt: 2181 },
+    { name: "Jun", uv: 2390, pv: 3800, amt: 2500 },
+    { name: "Jul", uv: 3490, pv: 4300, amt: 2100 },
+  ];
+
+  const composedChartData = [
+    { name: "Jan", uv: 4000, pv: 2400, amt: 2400 },
+    { name: "Feb", uv: 3000, pv: 1398, amt: 2210 },
+    { name: "Mar", uv: 2000, pv: 9800, amt: 2290 },
+    { name: "Apr", uv: 2780, pv: 3908, amt: 2000 },
+    { name: "May", uv: 1890, pv: 4800, amt: 2181 },
+    { name: "Jun", uv: 2390, pv: 3800, amt: 2500 },
+    { name: "Jul", uv: 3490, pv: 4300, amt: 2100 },
+  ];
+
+  const pieChartData = [
+    { name: "Category A", value: 400 },
+    { name: "Category B", value: 300 },
+    { name: "Category C", value: 200 },
+    { name: "Category D", value: 500 },
+  ];
+
+  const radarChartData = [
+    { subject: "Math", A: 120, B: 110, fullMark: 150 },
+    { subject: "Chinese", A: 98, B: 130, fullMark: 150 },
+    { subject: "English", A: 86, B: 130, fullMark: 150 },
+    { subject: "Geography", A: 99, B: 100, fullMark: 150 },
+    { subject: "Physics", A: 85, B: 90, fullMark: 150 },
+    { subject: "History", A: 65, B: 85, fullMark: 150 },
+  ];
+
+  const scatterChartData = [
+    { x: 10, y: 30 },
+    { x: 30, y: 200 },
+    { x: 45, y: 100 },
+    { x: 50, y: 400 },
+    { x: 70, y: 150 },
+    { x: 100, y: 250 },
   ];
 
   return (
     <main className="main-container">
+      <div className="calendar-dropdown-container">
+        <button className="icon" onClick={toggleCalendar}>
+          Calendar
+        </button>
+        {showCalendar && <CalendarComponent onChangeMonth={handleDateSelect} />}
+      </div>
       <div className="main-title">
         <h3>DASHBOARD</h3>
       </div>
-
       <div className="main-cards">
         <div className="card">
           <div className="card-inner">
@@ -95,62 +131,49 @@ function Home() {
         </div>
         <div className="card">
           <div className="card-inner">
-            <h3>Virtual Server:</h3>
+            <h3>Virtual Server:</h3>
             <BsFillBellFill className="card_icon" />
           </div>
-          <h1> 26098</h1>
+          <h1>26098</h1>
         </div>
       </div>
+      {/*  */}
+      {/* Add your charts here */}
+      <div className="chart-container">
+        <div>
+          <h4>Line Chart</h4>
+          <LineChartComponent data={lineChartData} />
+        </div>
 
-      <div className="charts">
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart
-            width={500}
-            height={300}
-            data={data}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="pv" fill="#8884d8" />
-            <Bar dataKey="uv" fill="#82ca9d" />
-          </BarChart>
-        </ResponsiveContainer>
+        <div>
+          <h4>Area Chart</h4>
+          <AreaChartComponent data={areaChartData} />
+        </div>
 
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart
-            width={500}
-            height={300}
-            data={data}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Line
-              type="monotone"
-              dataKey="pv"
-              stroke="#8884d8"
-              activeDot={{ r: 8 }}
-            />
-            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-          </LineChart>
-        </ResponsiveContainer>
+        <div>
+          <h4>Bar Chart</h4>
+          <BarChartComponent data={barChartData} />
+        </div>
+
+        <div>
+          <h4>Composed Chart</h4>
+          <ComposedChartComponent data={composedChartData} />
+        </div>
+
+        <div>
+          <h4>Pie Chart</h4>
+          <PieChartComponent data={pieChartData} />
+        </div>
+
+        <div>
+          <h4>Radar Chart</h4>
+          <RadarChartComponent data={radarChartData} />
+        </div>
+
+        <div>
+          <h4>Scatter Chart</h4>
+          <ScatterChartComponent data={scatterChartData} />
+        </div>
       </div>
     </main>
   );

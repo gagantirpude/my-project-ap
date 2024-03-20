@@ -1,3 +1,7 @@
+/* styles.css */
+
+@import "static";
+
 .icon {
   font-size: 20px;
   margin-right: 10px;
@@ -10,14 +14,30 @@
 }
 
 .profile-image {
-  width: 45px !important;
-  height: 45px !important;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.profile-dropdown,
+.calendar-dropdown {
+  position: relative;
+}
+
+.profile-dropdown .icon,
+.calendar-dropdown .icon {
+  margin-right: 0; /* Remove margin for the icon inside dropdown */
 }
 
 .dropdown-menu {
   position: absolute;
-  top: 50px;
+  top: 100%;
   right: 0;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -25,9 +45,11 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
   display: none; /* Initially hide the dropdown */
+  color: $black;
 }
 
-.profile:hover .dropdown-menu {
+.profile-dropdown:hover .dropdown-menu,
+.calendar-dropdown:hover .dropdown-menu {
   display: block; /* Show the dropdown on hover */
 }
 
@@ -46,33 +68,20 @@
   background-color: #f0f0f0;
 }
 
-// .dropdown-menu {
-//   position: absolute;
-//   top: 50px;
-//   right: 0;
-//   background-color: #fff;
-//   border: 1px solid #ccc;
-//   border-radius: 5px;
-//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-//   padding: 10px 0;
-//   display: none; /* Initially hide the dropdown */
-// }
+.calendar-dropdown .dropdown-menu {
+  left: 50%; /* Center the dropdown */
+  transform: translateX(-50%);
+}
 
-// .dropdown-menu.active {
-//   display: block; /* Show the dropdown when active */
-// }
+.calendar-dropdown {
+  /* Your existing styles */
+  // display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+}
 
-// .dropdown-menu ul {
-//   list-style-type: none;
-//   padding: 0;
-//   margin: 0;
-// }
-
-// .dropdown-menu ul li {
-//   padding: 10px 20px;
-//   cursor: pointer;
-// }
-
-// .dropdown-menu ul li:hover {
-//   background-color: #f0f0f0;
-// }
+.calendar-container {
+  /* Additional styles for the container of the Calendar component */
+  width: 300px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+}

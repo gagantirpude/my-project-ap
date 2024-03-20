@@ -62,4 +62,13 @@
   z-index: 12 !important;
 }
 
-/* End Sidebar  */
+//! Hide Scrollbar
+.sidebar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Hide scrollbar thumb (handle) for WebKit browsers (Chrome, Safari) */
+.sidebar::-webkit-scrollbar {
+  display: none;
+}

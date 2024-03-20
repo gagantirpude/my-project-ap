@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   BsFillBellFill,
   BsFillEnvelopeFill,
@@ -6,8 +5,7 @@ import {
   BsJustify,
 } from "react-icons/bs";
 import ProfileComponent from "./ProfileComponent";
-import CalendarComponent from "./CalendarComponent";
-import "../styles/demo3.scss";
+import "../styles/dropdown.scss";
 
 function Header({ OpenSidebar }) {
   // Mock user data
@@ -27,18 +25,6 @@ function Header({ OpenSidebar }) {
     console.log("Navigating to settings...");
   };
 
-  const [showCalendar, setShowCalendar] = useState(false);
-
-  const toggleCalendar = () => {
-    setShowCalendar(!showCalendar);
-  };
-
-  const handleDateSelect = (year, month) => {
-    // Add your logic for handling selected date here
-    console.log("Selected month:", month);
-    console.log("Selected year:", year);
-  };
-
   return (
     <header className="header">
       <div className="menu-icon">
@@ -48,15 +34,6 @@ function Header({ OpenSidebar }) {
         <BsSearch className="icon" />
       </div>
       <div className="header-right">
-        <div className="calendar-dropdown">
-          <button className="icon" onClick={toggleCalendar}>
-            Calendar
-          </button>
-          {showCalendar && (
-            <CalendarComponent onChangeMonth={handleDateSelect} />
-          )}
-        </div>
-
         <BsFillBellFill className="icon" />
         <BsFillEnvelopeFill className="icon" />
         <div className="profile-dropdown">

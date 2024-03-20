@@ -1,33 +1,3 @@
-// import React from "react";
-
-// function CalendarComponent({ onSelectDate }) {
-//   // Generate current month's days
-//   const currentDate = new Date();
-//   const currentYear = currentDate.getFullYear();
-//   const currentMonth = currentDate.getMonth();
-//   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-//   const days = Array.from({ length: daysInMonth }, (_, index) => index + 1);
-
-//   const handleDateSelect = (day) => {
-//     onSelectDate(day);
-//   };
-
-//   return (
-//     <div className="calendar">
-//       <h2>Calendar</h2>
-//       <div className="days">
-//         {days.map((day) => (
-//           <div key={day} className="day" onClick={() => handleDateSelect(day)}>
-//             {day}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default CalendarComponent;
-
 import React, { useState } from "react";
 
 function CalendarComponent({ onChangeMonth }) {

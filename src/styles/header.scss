@@ -1,7 +1,9 @@
+@import "static.scss";
+
 /* Header  */
 .header {
   grid-area: header;
-  height: 60px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,8 +20,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
+  background-color: $white;
+  color: $black;
 }
 
 .header-left,
