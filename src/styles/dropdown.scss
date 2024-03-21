@@ -85,3 +85,22 @@
   width: 300px; /* Adjust width as needed */
   height: 300px; /* Adjust height as needed */
 }
+
+.pro-btn {
+  webkit-appearance: none;
+  width: none;
+  min-width: none;
+  border-radius: 0px;
+  text-align: center;
+  padding: none;
+  margin-top: none;
+  background-color: $white;
+  color: $black;
+  font-size: 14px;
+  margin-left: none;
+  // font-weight: 500;
+  // box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.13);
+  border: none;
+  transition: none;
+  outline: 0;
+}

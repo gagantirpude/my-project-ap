@@ -4,8 +4,8 @@ import {
   BsSearch,
   BsJustify,
 } from "react-icons/bs";
+import { toast } from "react-hot-toast";
 import ProfileComponent from "./ProfileComponent";
-// import { useToasts } from "react-hot-toast";
 
 import { Link } from "react-router-dom";
 import "../styles/dropdown.scss";
@@ -23,13 +23,13 @@ function Header({ OpenSidebar }) {
 
   const handleLogout = () => {
     // Handle logout logic here
-    // success("Logout Successful Neha!");
+    toast.success("Logout Successful Neha!");
     console.log("Logging out...");
   };
 
   const handleSettings = () => {
     // Handle settings logic here
-    // error("Please contact admin for settings!");
+    toast.error("Please contact admin for settings!");
     console.log("Navigating to settings...");
   };
 

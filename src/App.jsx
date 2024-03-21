@@ -19,8 +19,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      <Toaster position="top-right" reverseOrder={false} />
       {/* <Footer /> */}
+      <Toaster />
     </Router>
   );
 }

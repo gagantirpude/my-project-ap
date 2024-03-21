@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-hot-toast";
 import "../styles/dropdown.scss";
-
 
 function ProfileComponent({ username, onLogout, onSettings, profileImage }) {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -21,7 +21,12 @@ function ProfileComponent({ username, onLogout, onSettings, profileImage }) {
       {showDropdown && (
         <div className="dropdown-menu">
           <ul>
-            <li>{username}</li>
+            <li>
+              <button className="pro-btn" onClick={() => toast.success("Hi.. Neha (❁´◡`❁)")}>
+                {" "}
+                {username}
+              </button>
+            </li>
             <li onClick={onSettings}>Settings</li>
             <li onClick={onLogout}>Logout</li>
             <ul>
