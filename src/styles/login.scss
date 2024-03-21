@@ -213,11 +213,41 @@ input {
 }
 
 @media only screen and (max-width: 480px) {
-  .login-body {
-    align-items: center;
-    justify-content: center;
+  form {
+    position: relative;
+    left: -8%;
   }
   .left {
-    display: none; /* Hide the left section on smaller screens */
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  form {
+    position: relative;
+    left: -12%;
+  }
+  .left {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 384px) {
+  form {
+    position: relative;
+    left: -11%;
+  }
+  .left {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 395px) {
+  form {
+    position: relative;
+    left: -7%;
+  }
+  .left {
+    display: none;
   }
 }
