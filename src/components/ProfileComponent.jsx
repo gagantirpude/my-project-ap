@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import PageNotFound from "../pages/PageNotFound";
+import "../styles/dropdown.scss";
+
 
 function ProfileComponent({ username, onLogout, onSettings, profileImage }) {
   const [showDropdown, setShowDropdown] = useState(false);
