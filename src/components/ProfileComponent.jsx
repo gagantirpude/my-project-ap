@@ -34,7 +34,7 @@ function ProfileComponent({ username, onLogout, onSettings, profileImage }) {
                 <Link to="*">
                   <div className="custom-link">
                     <img src="profile.png" alt="" />
-                    <span>404 page</span>
+                    <span>404</span>
                   </div>
                 </Link>
               </li>
