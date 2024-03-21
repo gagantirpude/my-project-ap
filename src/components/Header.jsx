@@ -6,6 +6,8 @@ import {
 } from "react-icons/bs";
 import ProfileComponent from "./ProfileComponent";
 // import { useToasts } from "react-hot-toast";
+
+import { Link } from "react-router-dom";
 import "../styles/dropdown.scss";
 
 function Header({ OpenSidebar }) {
