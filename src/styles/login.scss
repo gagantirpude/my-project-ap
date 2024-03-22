@@ -212,13 +212,26 @@ input {
   }
 }
 
-@media only screen and (max-width: 480px) {
+// @media only screen and (max-width: 480px) {
+//   .left {
+//     display: none;
+//   }
+// }
+
+@media only screen and (max-width: 400px) {
+  form {
+    width: 200px;
+  }
+  input {
+    min-width: auto !important;
+  }
+
   .left {
     display: none;
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   form {
     width: 200px;
   }
