@@ -222,40 +222,11 @@ input {
   form {
     width: 200px;
   }
+  input {
+    min-width: auto !important;
+  }
+
   .left {
     display: none;
   }
-
-  input {
-    width: 200px;
-  }
 }
-// // // @media only screen and (max-width: 360px) {
-// // //   form {
-// // //     position: relative;
-// // //     left: -12%;
-// // //   }
-// // //   .left {
-// // //     display: none;
-// // //   }
-// // // }
-
-// // // @media only screen and (max-width: 384px) {
-// // //   form {
-// // //     position: relative;
-// // //     left: -11%;
-// // //   }
-// // //   .left {
-// // //     display: none;
-// // //   }
-// // // }
-
-// // @media only screen and (min-width: 395px) {
-// //   form {
-// //     position: relative;
-// //     left: -7%;
-// //   }
-// //   .left {
-// //     display: none;
-// //   }
-// // }
