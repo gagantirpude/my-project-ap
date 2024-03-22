@@ -155,11 +155,11 @@ input {
 //     justify-content: center;
 //   }
 
-//   .session {
-//     position: relative;
-//     left: -400px;
-//     width: 80%;
-//   }
+// .session {
+//   position: relative;
+//   left: -400px;
+//   width: 80%;
+// }
 // }
 
 // @media only screen and (max-width: 1600px) {
@@ -173,21 +173,22 @@ input {
 //   }
 // }
 
-// // @media only screen and (max-width: 1200px) {
-// //   .login-body {
-// //     align-items: center;
-// //     justify-content: center;
-// //   }
+@media only screen and (min-width: 1200px) {
+  .login-body {
+    align-items: center;
+    justify-content: center;
+  }
 
-// //   form {
-// //     max-width: 100%;
-// //   }
+  form {
+    max-width: 100%;
+  }
 
-// //   .session {
-// //     left: 0;
-// //     width: 70%;
-// //   }
-
+  .session {
+    float: left;
+    position: relative;
+    left: -400px;
+  }
+}
 // //   .left {
 // //     width: 100%;
 // //     border-radius: 0;
@@ -202,11 +203,11 @@ input {
 
   .session {
     left: 0;
-    width: 80%;
+    width: 70%;
   }
 
   .left {
-    width: 110%;
+    width: 30%;
     border-radius: 0;
   }
 }
@@ -217,6 +218,18 @@ input {
   }
 }
 
+@media only screen and (max-width: 400px) {
+  form {
+    width: 200px;
+  }
+  .left {
+    display: none;
+  }
+
+  input {
+    width: 200px;
+  }
+}
 // // // @media only screen and (max-width: 360px) {
 // // //   form {
 // // //     position: relative;
