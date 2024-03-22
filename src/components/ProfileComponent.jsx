@@ -14,7 +14,7 @@ function ProfileComponent({ username, onLogout, onSettings, profileImage }) {
     <div className="profile">
       <img
         src={profileImage}
-        alt="Profile"
+        alt="Neha"
         className="profile-image"
         onClick={toggleDropdown}
       />
@@ -22,7 +22,10 @@ function ProfileComponent({ username, onLogout, onSettings, profileImage }) {
         <div className="dropdown-menu">
           <ul>
             <li>
-              <button className="pro-btn" onClick={() => toast.success("Hi.. Neha (❁´◡`❁)")}>
+              <button
+                className="pro-btn"
+                onClick={() => toast.success("Hi.. Neha (❁´◡`❁)")}
+              >
                 {" "}
                 {username}
               </button>
@@ -33,9 +36,9 @@ function ProfileComponent({ username, onLogout, onSettings, profileImage }) {
               <li>
                 <Link to="/login">Login</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/register">Register</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="*">
                   <div className="custom-link">
